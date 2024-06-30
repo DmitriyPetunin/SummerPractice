@@ -44,7 +44,8 @@ class MainActivity : AppCompatActivity() {
     private fun globalRace(listCars : ArrayList<Car>) {
         var winners = listCars
         while (winners.size > 1){
-             winners = lap(winners)
+            winners = lap(winners)
+
         }
         Log.i("victory","Победитель гонки $winners")
     }

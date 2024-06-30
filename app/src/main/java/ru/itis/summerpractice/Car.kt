@@ -5,7 +5,7 @@ open class Car(
     val model:String,
     val year:Int) {
 
-     override fun toString(): String {
+    override fun toString(): String {
         return "Car(mark='$mark', model='$model', year=$year)"
     }
     fun race(car2:Car):Car{
