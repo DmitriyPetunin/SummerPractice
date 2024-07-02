@@ -29,7 +29,6 @@ class MainContainerActivity : AppCompatActivity() {
 
     override fun onBackPressed() {
         super.onBackPressed()
-
         controller?.navigateUp()
     }
 
