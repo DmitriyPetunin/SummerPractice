@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SummerPractice</string>
+
+    <string name="music_screen">Music</string>
+    <string name="book_screen">Book</string>
+    <string name="person_screen">Person</string>
+    <string name="settings_screen">Settings</string>
+    <string name="message_screen">Message</string>
+
 </resources>
