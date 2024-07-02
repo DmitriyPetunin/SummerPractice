@@ -7,10 +7,10 @@
     tools:context=".EmptyFragment">
 
     <TextView
+        android:id = "@+id/success_text_view"
         style="@style/AppTitle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id = "@+id/success_text_view"
         android:textSize="28sp"
         android:gravity="center"/>
 </FrameLayout>

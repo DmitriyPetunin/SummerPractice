@@ -19,7 +19,9 @@ class PersonFragment : Fragment(R.layout.fragment_person) {
             sendButton.setOnClickListener {
                 val text = etPassword.text.toString()
                 if (text.isEmpty()) {
-                    Snackbar.make(view, "password is empty", Snackbar.LENGTH_LONG).setAnchorView(R.id.bottomNavigation).show()
+                    Snackbar.make(view, "password is empty", Snackbar.LENGTH_LONG)
+                        .setAnchorView(R.id.bottomNavigation)
+                        .show()
                 } else {
                     findNavController().navigate(R.id.action_personFragment_to_emptyFragment,EmptyFragment.bundle(text))
                 }
