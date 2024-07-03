@@ -1,8 +1,9 @@
-package ru.itis.summerpractice
+package ru.itis.summerpractice.otherfragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
+import ru.itis.summerpractice.R
 import ru.itis.summerpractice.databinding.FragmentEmptyBinding
 
 class EmptyFragment : Fragment(R.layout.fragment_empty) {

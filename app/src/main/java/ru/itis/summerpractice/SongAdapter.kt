@@ -1,10 +1,13 @@
 package ru.itis.summerpractice
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.RequestManager
 import ru.itis.summerpractice.databinding.ItemSongBinding
+
 
 class SongAdapter(
     private var list: List<Song>,
@@ -25,7 +28,13 @@ class SongAdapter(
         onClick = onClick,
     )
     override fun onBindViewHolder(holder: SongHolder, position: Int) {
-        holder.onBind(list[position])
+        val song = list[position]
+        holder.onBind(song)
+//        val fragment = SongDescriptionFragment.newInstance(song.id)
+//        requireActivity().supportFragmentManager.beginTransaction()
+//            .replace(R.id.musicFragment, fragment)
+//            .addToBackStack(null)
+//            .commit()
     }
 
     override fun getItemCount(): Int = list.size

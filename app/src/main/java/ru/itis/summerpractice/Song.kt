@@ -5,4 +5,7 @@ data class Song(
     val name: String,
     val genre: String,
     val url: String,
+    val short_description:String,
+    val long_description:String,
+
 )
