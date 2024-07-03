@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/personFragment">
+
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="ru.itis.summerpractice.otherfragments.PersonFragment"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_person">
+
+        <action
+            android:id="@+id/action_personFragment_to_emptyFragment"
+            app:destination="@id/emptyFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookFragment"
+        android:name="ru.itis.summerpractice.otherfragments.BookFragment"
+        android:label="fragment_book"
+        tools:layout="@layout/fragment_book" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/messageFragment"
+        android:name="ru.itis.summerpractice.otherfragments.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="ru.itis.summerpractice.otherfragments.MusicFragment"
+        android:label="fragment_music"
+        tools:layout="@layout/fragment_music" >
+        <action
+            android:id="@+id/action_musicFragment_to_songDescriptionFragment"
+            app:destination="@id/songDescriptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ru.itis.summerpractice.otherfragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/emptyFragment"
+        android:name="ru.itis.summerpractice.otherfragments.EmptyFragment"
+        android:label="fragment_page"
+        tools:layout="@layout/fragment_empty" />
+    <fragment
+        android:id="@+id/songDescriptionFragment"
+        android:name="ru.itis.summerpractice.SongDescriptionFragment"
+        android:label="SongDescriptionFragment" />
+</navigation>
