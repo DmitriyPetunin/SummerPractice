@@ -1,5 +1,6 @@
 package ru.itis.summerpractice
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,6 +31,8 @@ class SongAdapter(
     override fun onBindViewHolder(holder: SongHolder, position: Int) {
         val song = list[position]
         holder.onBind(song)
+        Log.d("->->",song.toString())
+
 //        val fragment = SongDescriptionFragment.newInstance(song.id)
 //        requireActivity().supportFragmentManager.beginTransaction()
 //            .replace(R.id.musicFragment, fragment)
@@ -39,8 +42,4 @@ class SongAdapter(
 
     override fun getItemCount(): Int = list.size
 
-    fun updateDataset(newList: List<Song>) {
-        list = newList
-        notifyDataSetChanged()
-    }
 }

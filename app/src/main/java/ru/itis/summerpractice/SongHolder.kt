@@ -1,6 +1,7 @@
 package ru.itis.summerpractice
 
 import android.content.Context
+import android.util.Log
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.bumptech.glide.RequestManager
 import com.bumptech.glide.load.engine.DiskCacheStrategy
@@ -23,6 +24,7 @@ class SongHolder(
         binding.run {
             itemTitle.text = song.name
             itemGenre.text = song.genre
+            Log.d("holder",itemGenre.text.toString())
 
             glide
                 .load(song.url)
@@ -32,7 +34,7 @@ class SongHolder(
                 .into(itemImage)
 
             root.setOnClickListener {
-                onClick.invoke(song)
+                onClick(song)
             }
 
             itemGenre.setTextColor(context.getColor(song.getTitleColor()))

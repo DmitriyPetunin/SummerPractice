@@ -1,6 +1,15 @@
 package ru.itis.summerpractice
 
 object SongRepo {
+    fun getSongById(id: Int): Song? {
+        for (song in songs) {
+            if (song.id == id) {
+                return song
+            }
+        }
+        return null
+    }
+
     val songs: List<Song> = listOf(
         Song(
             id = 1,
@@ -58,6 +67,6 @@ object SongRepo {
             short_description = "Naper",
             long_description = " "
         ),
-
     )
+
 }
